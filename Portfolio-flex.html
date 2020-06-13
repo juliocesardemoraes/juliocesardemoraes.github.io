@@ -9,7 +9,11 @@
     
     <!--Importando Font Awesome(Icones)-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet"> 
-
+    
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="floating-wpp.css">
+    <script type="text/javascript" src="floating-wpp.js"></script>
+   
    
 </head>
 <style>
@@ -23,6 +27,7 @@
         --main-red: #be3144;
         --main-blue: #45567d;
         --main-gray: #303841;
+        --main-green: #25d366;
     }
     html {
     
@@ -170,13 +175,26 @@
         
     }
     .icon{
+        position: fixed;
+        width:72px;
+        height:72px;
+        border-radius:1em;
         background-color:var(--main-red);
+        right:0;
+        bottom:5px;
+        
+
     }
     .icon:hover{
         background-color:var(--main-white);
     }
     #contato{
-        background-color:var(--main-gray);
+        background:var(--main-gray);
+    }
+    .center-icon{
+        top:10px;
+        position:relative;
+        
     }
 
 
@@ -229,9 +247,9 @@
         </section>
 
         <section class="wrapper" id="Contato">
-            <h1 class="mt-1 mb-1">Formas de Contato</h1>
-            <a class="icon" href="mailto:jcmcf2012@gmail.com"><i class="fa fa-envelope" style="font-size:36px"></i></a>
-            <div id="myDiv"></div>
+            
+            <a class="icon" href="mailto:jcmcf2012@gmail.com"><i class="fa fa-envelope center-icon" style="font-size:36px"></i></a>
+            <div id="myButton"></div>
         </section>
 
 
@@ -240,14 +258,20 @@
 </body>
 
 <script type="text/javascript">
-  $(function () {
-    $('#myDiv').floatingWhatsApp({
-      phone: '5491133359850',
-      headerColor: 'crimson'
+    $(function () {
+        $('#myButton').floatingWhatsApp({
+            phone: '+55359244-0033',
+            popupMessage: 'Contato Pelo Whatsapp',
+            message: "Mande uma mensagem para mim",
+            showPopup: true,
+            showOnIE: false,
+            headerTitle: 'Bem vindo ao meu portfolio!',
+            headerColor: 'var(--main-green)',
+            backgroundColor: 'var(--main-green)',
+            buttonImage: '<img src="whatsapp.svg" />'
+        });
     });
-  });
 </script>
-<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="floating-wpp.min.js"></script>
-<link rel="stylesheet" href="floating-wpp.min.css">
+
+
 </html>
