@@ -1,37 +1,298 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Floating WhatsApp Button Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <!--Importando Fontes do Google-->
+        <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+    
+    <!--Importando Font Awesome(Icones)-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" rel="stylesheet"> 
+    
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="floating-wpp.css">
     <script type="text/javascript" src="floating-wpp.js"></script>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif
-        }
-    </style>
+   
+   
 </head>
+<style>
+    *,
+    *::before,
+    *::after {
+    box-sizing: inherit;
+    }
+    :root {
+        --main-white: #f0f0f0;
+        --main-red: #be3144;
+        --main-blue: #45567d;
+        --main-gray: #303841;
+        --main-green: #25d366;
+    }
+    html {
+    
+    font-size:90%;
+    }   
+    @media only screen and (max-width: 600px) {
+    html {
+    font-size: 70%;
+    }
+    }
+   
 
+    #nave{
+        width:100vw;
+        height:20vh;
+
+    }
+    #nav{
+        width:100%;
+        height:20vh;
+        background-image:var(--main-white);
+        z-index: 10;
+        position:fixed;
+        display:flex;
+        justify-content: flex-end;
+        top:0;
+        left:0;
+        background: var(--main-red);
+    }
+    #list{
+       display:flex;
+       
+       font-family:"Odibee Sans",sans-serif;
+       list-style: none;
+       margin: 0 3rem;
+    }
+    #list a{
+        color:var(--main-white);
+        display: block;
+        font-size: 1.5rem;
+        padding: 2rem;
+    }
+    
+    #list a:hover{
+        background: var(--main-blue);
+    }
+    
+    .wrapper{
+        display:flex;
+        flex-direction: column;
+        width:100%;
+        
+        font-size:3rem;
+        font-family:"Odibee Sans",sans-serif;
+        
+        font-family: 'Odibee Sans', cursive;;
+        top:0;
+        left:0;
+        text-align: center;
+       
+    }
+    #Portfolio{
+        background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+        color:#999999;
+        justify-content: center;
+        
+    }
+    #Project{
+        background-image: linear-gradient(62deg, #0a1a29 0%, #a469df 100%);
+        color:#f8f4f4;
+    }
+    #Project h1{
+        margin:10rem;
+    }
+   
+   *{
+       margin:0;
+   }
+   
+    li{
+        margin:0.5em;
+    }
+    .mt-1{
+        margin-top:1em;
+    }
+    .mt-2{
+        margin-top:2em;
+    }
+    .mt-4{
+        margin-top:4em;
+    }
+    .mb-1{
+        margin-bottom:1em;
+    }
+    .mb-2{
+        margin-bottom:2em;
+    }
+    .mb-4{
+        margin-bottom:4em;
+    }
+    .img img{
+        width:50%;
+        height:50%;
+    }
+    .img{
+        width:100vw;
+        height:100vh;
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+    }
+    
+   
+    main{
+        width:100vw;
+    }
+  
+    .flag{
+        width:40px;
+        heigth:40px;
+    }
+   
+    .center{
+        margin: 2em auto 2em auto;
+    }
+   
+    #certificado{
+        color:#36164A ;
+        background-image: linear-gradient(62deg, #A9C9FF 0%, #FFBBEC 100%);
+    }
+   
+    #certificado img{
+        width:50vw;
+        height:50vh;
+    }
+     @media only screen and (max-width: 800px) {
+        .img{
+            display:flex;
+            flex-direction:column !important;
+        }
+        .img img{
+            width:75%;
+            height:75%;
+        }
+        
+    }
+    .icon{
+        position: fixed;
+        width:72px;
+        height:72px;
+        border-radius:1em;
+        background-color:var(--main-red);
+        right:0;
+        bottom:5px;
+        transition: top 2s;
+        transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+
+    }
+   
+   
+  
+    .icon:hover{
+        
+        background-color:#a469df;
+    }
+
+
+
+   
+    .icons{
+        font-size:10vh;
+    }
+
+    .icon i{
+         top:14px;
+        position:relative;
+    }
+
+    #contato{
+        background:var(--main-gray);
+    }
+    
+</style>
 <body>
-    <div id="myButton"></div>
+    <section class="wrapper" id="nave">
+        <nav id="nav">
+            <ul id="list">
+                <a href="#Portfolio"><li>Sobre Mim</li></a>
+                <a href="#Project"><li>Projetos</li></a>
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <section class="wrapper" id="Portfolio">
+                <h1 class="mt-2">Portfólio Julio</h1>
+                <h5 class="mt-2">Nome: Júlio César de Moraes Carvalho Filho</h5>
+                <h5 class="mt-2">Experiência Profissional: Programador ( python ) de robôs com foco em compra e venda de moedas virtuais</h5>
+                <h5>2019(Outubro) - 2019(Dezembro)</h5>
+                <h5 class="mt-4">Formação Acadêmica: UNIVERSIDADE ESTADUAL DE MINAS GERAIS:<br> Sistemas de Informação </h5>
+                <h5>2018-2022</h5>
+                
+                <h5 class="mt-2">Idiomas:</h5>
+                <h5><img class="flag" src="img/Brasil.png"></img>Português- Nativo</h5>
+                <h5><img class="flag" src="img/Usa.png">Inglês- Fluente</h5>
+                <h5><img class="flag" src="img/Spain.png">Espanhol- Básico</h5>
+                <h5 class="mb-2"><img class="flag" src="img/Italia.png">Italiano- Iniciante</h5>
+        </section>
+        
+        
+        <section class="wrapper" id="Project">
+            <h1 >Meus Projetos WEB</h1>
+            
+            
+            <div class="img">
+                <a href="thetechoracle.herokuapp.com/" class="link" target="_blank" style="color:white"><i class="fas fa-newspaper icons"></i></a>
+                <h3>Blog TheTechOracle: Desenvolvido com node express.js <br>
+                    usando o banco de dados nosql MONGODB e<br> 
+                    foi feito o deploy do site por meio da plataforma heroku<br>
+                    (Clique no ícone ao lado para acessar o site)</h3>
+            </div>
+            
+            
+            <div class="img">
+                
+                <h3>Firechat: Desenvolvido com javascript/html/css <br>
+                    usando o banco de dados nosql Firebase e<br> 
+                    foi feito o deploy do site por meio da própria firebase<br> 
+                    (Clique no ícone ao lado para acessar o site)</h3>
+                <a href="https://fire-chat-7ac0e.web.app/" class="link" style="color:red" target="_blank"><i class="far fa-comment-alt icons"></i></a>
+            </div>
+            
+            
+       </section>
+        
+        <section class="wrapper" id="certificado">
+            <h1 class="mt-2">Certificados</h1>
+            <img class="center" src="img/Responsive-cert.png" ></img>
+        </section>
+
+        <section class="wrapper" id="Contato">
+            
+            <a class="icon" href="mailto:jcmcf2012@gmail.com"><i class="fa fa-envelope center-icon" style="color:white"></i></a>
+            <div id="myButton"></div>
+        </section>
+
+
+    </main>
+    
 </body>
 
 <script type="text/javascript">
     $(function () {
         $('#myButton').floatingWhatsApp({
-            phone: '5491133359850',
-            popupMessage: 'Hello, how can we help you?',
-            message: "I'd like to order a pizza",
+            phone: '+55359244-0033',
+            popupMessage: 'Contato Pelo Whatsapp',
+            message: "Mande uma mensagem para mim",
             showPopup: true,
             showOnIE: false,
-            headerTitle: 'Welcome!',
-            headerColor: 'crimson',
-            backgroundColor: 'crimson',
-            buttonImage: '<img src="burger.svg" />'
+            headerTitle: 'Bem vindo ao meu portfolio!',
+            headerColor: 'var(--main-green)',
+            backgroundColor: 'var(--main-green)',
+            buttonImage: '<img src="whatsapp.svg" />'
         });
     });
 </script>
+
 
 </html>
