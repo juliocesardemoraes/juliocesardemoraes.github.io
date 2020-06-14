@@ -172,6 +172,18 @@
             width:75%;
             height:75%;
         }
+        .fakeScreen p {
+            font-size:0.25em !important;
+             
+        }
+        .fakeScreen img{
+            width:0.5em !important;
+            height:0.5em !important;
+        }
+        #Portofolio img{
+            width:0.5em !important;
+            height:0.5em !important;
+        }
         
     }
     .icon{
@@ -186,29 +198,130 @@
         transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 
     }
-   
-   
-  
+    
+    
+    
     .icon:hover{
-        
+            
         background-color:#a469df;
     }
 
 
 
-   
+    
     .icons{
-        font-size:10vh;
+            font-size:10vh;
     }
 
     .icon i{
-         top:14px;
-        position:relative;
+            top:14px;
+            position:relative;
     }
 
     #contato{
-        background:var(--main-gray);
+            background:var(--main-gray);
     }
+
+
+
+
+.fakeScreen {
+  background-color: #151515;
+  box-sizing: border-box;
+  width: 50vw;
+  margin: 0 auto;
+  padding: 1em;
+  border-radius:1em;
+}
+
+.fakeScreen p {
+  position: relative;
+  left: 50%;
+  margin-left: -8.5em;
+  text-align: left;
+  font-size: 0.5em;
+  font-family: monospace;
+  white-space: normal;
+  overflow: hidden;
+  width: 0;
+}
+
+.fakeScreen img{
+  width:0.8em;
+  height:0.8em;
+}
+
+
+span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.line1 {
+  color: #9CD9F0;
+  animation: type .5s 3s steps(20, end) forwards;
+}
+
+.cursor1 {
+  animation: blink 1s 2s 2 forwards;
+}
+
+.line2 {
+  color: #CDEE69;
+  animation: type .5s 5.25s steps(20, end) forwards;
+}
+
+.cursor2 {
+  animation: blink 1s 5.25s 2 forwards;
+}
+
+.line3 {
+  color: var(--main-green);
+  
+  animation: type .5s 7.5s steps(20, end) forwards;
+}
+
+.cursor3 {
+  animation: blink 1s 8.5s 2 forwards;
+}
+
+.line4 {
+  color: #fff;
+  animation: type .5s 10.75s steps(20, end) forwards;
+}
+
+.cursor4 {
+  animation: blink 1s 8.5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes type {
+  to {
+    width: 17em;
+  }
+}
+
+#Portfolio img{
+    width:0.8em;
+    height:0.8em;
+}
+
     
 </style>
 <body>
@@ -224,7 +337,7 @@
         <section class="wrapper" id="Portfolio">
                 <h1 class="mt-2">Portfólio Julio</h1>
                 <h5 class="mt-2">Nome: Júlio César de Moraes Carvalho Filho</h5>
-                <h5 class="mt-2">Experiência Profissional: Programador ( python ) de robôs com foco em compra e venda de moedas virtuais</h5>
+                <h5 class="mt-2">Experiência Profissional: Programador ( python<img src="img/python.png"></img> ) de robôs com foco em compra e venda de moedas virtuais</h5>
                 <h5>2019(Outubro) - 2019(Dezembro)</h5>
                 <h5 class="mt-4">Formação Acadêmica: UNIVERSIDADE ESTADUAL DE MINAS GERAIS:<br> Sistemas de Informação </h5>
                 <h5>2018-2022</h5>
@@ -234,6 +347,21 @@
                 <h5><img class="flag" src="img/Usa.png">Inglês- Fluente</h5>
                 <h5><img class="flag" src="img/Spain.png">Espanhol- Básico</h5>
                 <h5 class="mb-2"><img class="flag" src="img/Italia.png">Italiano- Iniciante</h5>
+
+               
+                <div class="fakeScreen">
+                        <p class="line1"><img src="img/js.png"></img>Javascript Html CSS(2017-2020)-Programador Júnior<span class="cursor1">_</span></p>
+                        <p class="line2"><img src="img/c++.png"></img>C++(2018-2020)-Programador Júnior<span class="cursor2">_</span></p>
+                        <p class="line3"><img src="img/python.png"></img>Python(2019-2020)-Programador Júnior<span class="cursor3">_</span></p>
+                        <p class="line4"><img src="img/csharp.png"></img>C#(2019-2020)-Programador Júnior<span class="cursor4">_</span></p>
+                        <p class="line5"><span class="cursor4">_</span></p>
+                </div>
+                
+                <h5 class="mt-2 mb-1">Habilidades Adicionais:</h5>
+                <h5 class="mb-1">Experiência em programas do office(Word,Excel,Powerpoint,etc...)</h5>
+                <h5 class="mb-1">Web Scraping e CSV usando python</h5>
+                <h5 class="mb-1">Experiência com github, git no terminal</h5>
+                <h5 class="mb-2">Familiaridade com bootstrap e outras bibliotecas front-end/back-end</h5>
         </section>
         
         
@@ -242,7 +370,7 @@
             
             
             <div class="img">
-                <a href="thetechoracle.herokuapp.com/" class="link" target="_blank" style="color:white"><i class="fas fa-newspaper icons"></i></a>
+                <a href="https://thetechoracle.herokuapp.com/" class="link" target="_blank" style="color:white"><i class="fas fa-newspaper icons"></i></a>
                 <h3>Blog TheTechOracle: Desenvolvido com node express.js <br>
                     usando o banco de dados nosql MONGODB e<br> 
                     foi feito o deploy do site por meio da plataforma heroku<br>
