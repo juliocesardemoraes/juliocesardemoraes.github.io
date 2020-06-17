@@ -1,0 +1,307 @@
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+    --main-green: #25d366;
+}
+html {
+
+font-size:90%;
+}   
+@media only screen and (max-width: 600px) {
+html {
+font-size: 70%;
+}
+}
+
+
+#nave{
+    width:100vw;
+    height:20vh;
+
+}
+#nav{
+    width:100%;
+    height:20vh;
+    background-image:var(--main-white);
+    z-index: 10;
+    position:fixed;
+    display:flex;
+    justify-content: flex-end;
+    top:0;
+    left:0;
+    background: var(--main-red);
+}
+#list{
+   display:flex;
+   
+   font-family:"Odibee Sans",sans-serif;
+   list-style: none;
+   margin: 0 3rem;
+}
+#list a{
+    color:var(--main-white);
+    display: block;
+    font-size: 1.5rem;
+    padding: 2rem;
+}
+
+#list a:hover{
+    background: var(--main-blue);
+}
+
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    
+    font-size:3rem;
+    font-family:"Odibee Sans",sans-serif;
+    
+    font-family: 'Odibee Sans', cursive;;
+    top:0;
+    left:0;
+    text-align: center;
+   
+}
+.Portfolio{
+    background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    color:#999999;
+    justify-content: center;
+}
+.Project{
+    background-image: linear-gradient(62deg, #0a1a29 0%, #a469df 100%);
+    color:#f8f4f4;
+}
+.Project h1{
+    margin:10rem;
+}
+
+*{
+   margin:0;
+}
+
+li{
+    margin:0.5em;
+}
+.mt-1{
+    margin-top:1em;
+}
+.mt-2{
+    margin-top:2em;
+}
+.mt-4{
+    margin-top:4em;
+}
+.mb-1{
+    margin-bottom:1em;
+}
+.mb-2{
+    margin-bottom:2em;
+}
+.mb-4{
+    margin-bottom:4em;
+}
+.img img{
+    width:50%;
+    height:50%;
+}
+.img{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+}
+
+
+main{
+    width:100vw;
+}
+
+.flag{
+    width:40px;
+    heigth:40px;
+}
+
+.center{
+    margin: 2em auto 2em auto;
+}
+
+#certificado{
+    color:#36164A ;
+    background-image: linear-gradient(62deg, #A9C9FF 0%, #FFBBEC 100%);
+}
+
+#certificado img{
+    width:50vw;
+    height:50vh;
+}
+ @media only screen and (max-width: 800px) {
+    .img{
+        display:flex;
+        flex-direction:column !important;
+    }
+    .img img{
+        width:75%;
+        height:75%;
+    }
+    .fakeScreen p {
+        font-size:0.25em !important;
+         
+    }
+    .fakeScreen img{
+        width:0.5em !important;
+        height:0.5em !important;
+    }
+    #Portofolio img{
+        width:0.5em !important;
+        height:0.5em !important;
+    }
+    
+}
+.icon{
+    position: fixed;
+    width:72px;
+    height:72px;
+    border-radius:1em;
+    background-color:var(--main-red);
+    right:0;
+    bottom:5px;
+    transition: top 2s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+
+}
+
+
+
+.icon:hover{
+        
+    background-color:#a469df;
+}
+
+
+
+
+.icons{
+        font-size:10vh;
+}
+
+.icon i{
+        top:14px;
+        position:relative;
+}
+
+#contato{
+        background:var(--main-gray);
+}
+
+
+
+
+.fakeScreen {
+background-color: #151515;
+box-sizing: border-box;
+width: 50vw;
+margin: 0 auto;
+padding: 1em;
+border-radius:1em;
+}
+
+.fakeScreen p {
+position: relative;
+left: 50%;
+margin-left: -8.5em;
+text-align: left;
+font-size: 0.5em;
+font-family: monospace;
+white-space: normal;
+overflow: hidden;
+width: 0;
+}
+
+.fakeScreen img{
+width:0.8em;
+height:0.8em;
+}
+
+
+span {
+color: #fff;
+font-weight: bold;
+}
+
+.line1 {
+color: #9CD9F0;
+animation: type .5s 3s steps(20, end) forwards;
+}
+
+.cursor1 {
+animation: blink 1s 2s 2 forwards;
+}
+
+.line2 {
+color: #CDEE69;
+animation: type .5s 5.25s steps(20, end) forwards;
+}
+
+.cursor2 {
+animation: blink 1s 5.25s 2 forwards;
+}
+
+.line3 {
+color: var(--main-green);
+
+animation: type .5s 7.5s steps(20, end) forwards;
+}
+
+.cursor3 {
+animation: blink 1s 8.5s 2 forwards;
+}
+
+.line4 {
+color: #fff;
+animation: type .5s 10.75s steps(20, end) forwards;
+}
+
+.cursor4 {
+animation: blink 1s 8.5s infinite;
+}
+
+@keyframes blink {
+0% {
+opacity: 0;
+}
+40% {
+opacity: 0;
+}
+50% {
+opacity: 1;
+}
+90% {
+opacity: 1;
+}
+100% {
+opacity: 0;
+}
+}
+@keyframes type {
+to {
+width: 17em;
+}
+}
+
+#Portfolio img{
+width:0.8em;
+height:0.8em;
+}
+.Changable{
+cursor:pointer;
+}
+

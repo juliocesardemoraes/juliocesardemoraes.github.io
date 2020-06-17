@@ -13,328 +13,26 @@
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="floating-wpp.css">
     <script type="text/javascript" src="floating-wpp.js"></script>
+    <link rel="icon" type="image/png"  href="https://img.icons8.com/fluent/48/000000/code.png" >
+    <link rel="stylesheet" href="index.css">
    
    
 </head>
 <style>
-    *,
-    *::before,
-    *::after {
-    box-sizing: inherit;
-    }
-    :root {
-        --main-white: #f0f0f0;
-        --main-red: #be3144;
-        --main-blue: #45567d;
-        --main-gray: #303841;
-        --main-green: #25d366;
-    }
-    html {
-    
-    font-size:90%;
-    }   
-    @media only screen and (max-width: 600px) {
-    html {
-    font-size: 70%;
-    }
-    }
-   
-
-    #nave{
-        width:100vw;
-        height:20vh;
-
-    }
-    #nav{
-        width:100%;
-        height:20vh;
-        background-image:var(--main-white);
-        z-index: 10;
-        position:fixed;
-        display:flex;
-        justify-content: flex-end;
-        top:0;
-        left:0;
-        background: var(--main-red);
-    }
-    #list{
-       display:flex;
-       
-       font-family:"Odibee Sans",sans-serif;
-       list-style: none;
-       margin: 0 3rem;
-    }
-    #list a{
-        color:var(--main-white);
-        display: block;
-        font-size: 1.5rem;
-        padding: 2rem;
-    }
-    
-    #list a:hover{
-        background: var(--main-blue);
-    }
-    
-    .wrapper{
-        display:flex;
-        flex-direction: column;
-        width:100%;
-        
-        font-size:3rem;
-        font-family:"Odibee Sans",sans-serif;
-        
-        font-family: 'Odibee Sans', cursive;;
-        top:0;
-        left:0;
-        text-align: center;
-       
-    }
-    #Portfolio{
-        background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-        color:#999999;
-        justify-content: center;
-        
-    }
-    #Project{
-        background-image: linear-gradient(62deg, #0a1a29 0%, #a469df 100%);
-        color:#f8f4f4;
-    }
-    #Project h1{
-        margin:10rem;
-    }
-   
-   *{
-       margin:0;
-   }
-   
-    li{
-        margin:0.5em;
-    }
-    .mt-1{
-        margin-top:1em;
-    }
-    .mt-2{
-        margin-top:2em;
-    }
-    .mt-4{
-        margin-top:4em;
-    }
-    .mb-1{
-        margin-bottom:1em;
-    }
-    .mb-2{
-        margin-bottom:2em;
-    }
-    .mb-4{
-        margin-bottom:4em;
-    }
-    .img img{
-        width:50%;
-        height:50%;
-    }
-    .img{
-        width:100vw;
-        height:100vh;
-        display:flex;
-        flex-direction:row;
-        justify-content:space-evenly;
-    }
-    
-   
-    main{
-        width:100vw;
-    }
-  
-    .flag{
-        width:40px;
-        heigth:40px;
-    }
-   
-    .center{
-        margin: 2em auto 2em auto;
-    }
-   
-    #certificado{
-        color:#36164A ;
-        background-image: linear-gradient(62deg, #A9C9FF 0%, #FFBBEC 100%);
-    }
-   
-    #certificado img{
-        width:50vw;
-        height:50vh;
-    }
-     @media only screen and (max-width: 800px) {
-        .img{
-            display:flex;
-            flex-direction:column !important;
-        }
-        .img img{
-            width:75%;
-            height:75%;
-        }
-        .fakeScreen p {
-            font-size:0.25em !important;
-             
-        }
-        .fakeScreen img{
-            width:0.5em !important;
-            height:0.5em !important;
-        }
-        #Portofolio img{
-            width:0.5em !important;
-            height:0.5em !important;
-        }
-        
-    }
-    .icon{
-        position: fixed;
-        width:72px;
-        height:72px;
-        border-radius:1em;
-        background-color:var(--main-red);
-        right:0;
-        bottom:5px;
-        transition: top 2s;
-        transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-
-    }
-    
-    
-    
-    .icon:hover{
-            
-        background-color:#a469df;
-    }
-
-
-
-    
-    .icons{
-            font-size:10vh;
-    }
-
-    .icon i{
-            top:14px;
-            position:relative;
-    }
-
-    #contato{
-            background:var(--main-gray);
-    }
-
-
-
-
-.fakeScreen {
-  background-color: #151515;
-  box-sizing: border-box;
-  width: 50vw;
-  margin: 0 auto;
-  padding: 1em;
-  border-radius:1em;
-}
-
-.fakeScreen p {
-  position: relative;
-  left: 50%;
-  margin-left: -8.5em;
-  text-align: left;
-  font-size: 0.5em;
-  font-family: monospace;
-  white-space: normal;
-  overflow: hidden;
-  width: 0;
-}
-
-.fakeScreen img{
-  width:0.8em;
-  height:0.8em;
-}
-
-
-span {
-  color: #fff;
-  font-weight: bold;
-}
-
-.line1 {
-  color: #9CD9F0;
-  animation: type .5s 3s steps(20, end) forwards;
-}
-
-.cursor1 {
-  animation: blink 1s 2s 2 forwards;
-}
-
-.line2 {
-  color: #CDEE69;
-  animation: type .5s 5.25s steps(20, end) forwards;
-}
-
-.cursor2 {
-  animation: blink 1s 5.25s 2 forwards;
-}
-
-.line3 {
-  color: var(--main-green);
-  
-  animation: type .5s 7.5s steps(20, end) forwards;
-}
-
-.cursor3 {
-  animation: blink 1s 8.5s 2 forwards;
-}
-
-.line4 {
-  color: #fff;
-  animation: type .5s 10.75s steps(20, end) forwards;
-}
-
-.cursor4 {
-  animation: blink 1s 8.5s infinite;
-}
-
-@keyframes blink {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes type {
-  to {
-    width: 17em;
-  }
-}
-
-#Portfolio img{
-    width:0.8em;
-    height:0.8em;
-}
-
-    
+ 
 </style>
 <body>
+    <main id="ptLang">
     <section class="wrapper" id="nave">
         <nav id="nav">
             <ul id="list">
-                <a href="#Portfolio"><li>Sobre Mim</li></a>
-                <a href="#Project"><li>Projetos</li></a>
+                <a href="#PortfolioPtBr"><li>Sobre Mim</li></a>
+                <a href="#ProjectPtBr"><li>Projetos</li></a>
             </ul>
         </nav>
     </section>
-    <main>
-        <section class="wrapper" id="Portfolio">
+    
+        <section class="wrapper Portfolio" id="PortfolioPtBr" >
                 <h1 class="mt-2">Portfólio Julio</h1>
                 <h5 class="mt-2">Nome: Júlio César de Moraes Carvalho Filho</h5>
                 <h5 class="mt-2">Experiência Profissional: Programador ( python<img src="img/python.png"></img> ) de robôs com foco em compra e venda de moedas virtuais</h5>
@@ -343,17 +41,17 @@ span {
                 <h5>2018-2022</h5>
                 
                 <h5 class="mt-2">Idiomas:</h5>
-                <h5><img class="flag" src="img/Brasil.png"></img>Português- Nativo</h5>
-                <h5><img class="flag" src="img/Usa.png">Inglês- Fluente</h5>
+                <h5><img class="flag Changable" onclick="trocarLingua('pt')" src="img/Brasil.png"></img>Português- Nativo</h5>
+                <h5><img class="flag Changable" onclick="trocarLingua('ingles')" src="img/Usa.png"></img>Inglês- Fluente(Click-Me)</h5>
                 <h5><img class="flag" src="img/Spain.png">Espanhol- Básico</h5>
                 <h5 class="mb-2"><img class="flag" src="img/Italia.png">Italiano- Iniciante</h5>
 
                
                 <div class="fakeScreen">
-                        <p class="line1"><img src="img/js.png"></img>Javascript Html CSS(2017-2020)-Programador Júnior<span class="cursor1">_</span></p>
-                        <p class="line2"><img src="img/c++.png"></img>C++(2018-2020)-Programador Júnior<span class="cursor2">_</span></p>
-                        <p class="line3"><img src="img/python.png"></img>Python(2019-2020)-Programador Júnior<span class="cursor3">_</span></p>
-                        <p class="line4"><img src="img/csharp.png"></img>C#(2019-2020)-Programador Júnior<span class="cursor4">_</span></p>
+                        <p class="line1"><img src="img/js.png"></img>console.log("Javascript Html CSS(2017-2020)-Programador Júnior")<span class="cursor1">_</span></p>
+                        <p class="line2"><img src="img/c++.png"></img>std::cout<<"C++(2018-2020)-Programador Júnior";<span class="cursor2">_</span></p>
+                        <p class="line3"><img src="img/python.png"></img>print("Python(2019-2020)-Programador Júnior")<span class="cursor3">_</span></p>
+                        <p class="line4"><img src="img/csharp.png"></img>console.WriteLine("C#(2019-2020)-Programador Júnior");<span class="cursor4">_</span></p>
                         <p class="line5"><span class="cursor4">_</span></p>
                 </div>
                 
@@ -365,7 +63,7 @@ span {
         </section>
         
         
-        <section class="wrapper" id="Project">
+        <section class="wrapper Project" id="ProjectPtBr" >
             <h1 >Meus Projetos WEB</h1>
             
             
@@ -390,13 +88,9 @@ span {
             
        </section>
         
-        <section class="wrapper" id="certificado">
-            <h1 class="mt-2">Certificados</h1>
-            <img class="center" src="img/Responsive-cert.png" ></img>
-        </section>
+        
 
         <section class="wrapper" id="Contato">
-            
             <a class="icon" href="mailto:jcmcf2012@gmail.com"><i class="fa fa-envelope center-icon" style="color:white"></i></a>
             <div id="myButton"></div>
         </section>
@@ -404,23 +98,92 @@ span {
 
     </main>
     
+
+    <main hidden id="enLang">
+        <section class="wrapper" id="nave">
+            <nav id="nav">
+                <ul id="list">
+                    <a href="#PortfolioEn"><li>About Me</li></a>
+                    <a href="#ProjectEn"><li>Projects</li></a>
+                </ul>
+            </nav>
+        </section>
+        
+            <section class="wrapper Portfolio" id="PortfolioEn" >
+                    <h1 class="mt-2">Portfolio Julio</h1>
+                    <h5 class="mt-2">Name: Júlio César de Moraes Carvalho Filho</h5>
+                    <h5 class="mt-2">Professional Experience: Programmer ( python<img src="img/python.png"></img> ) of robots responsible for buying and selling crypto current</h5>
+                    <h5>2019(October) - 2019(December)</h5>
+                    <h5 class="mt-4">College: UNIVERSIDADE ESTADUAL DE MINAS GERAIS:<br> Computer Information Systems </h5>
+                    <h5>2018-2022</h5>
+                    
+                    <h5 class="mt-2">Languages:</h5>
+                    <h5><img class="flag Changable" onclick="trocarLingua('pt')" src="img/Brasil.png"></img>Brasilian Portuguese- Native(Me Clique)</h5>
+                    <h5><img class="flag Changable" onclick="trocarLingua('ingles')" src="img/Usa.png" disabled></img>English- Fluent</h5>
+                    <h5><img class="flag" src="img/Spain.png">Spanish- Basic</h5>
+                    <h5 class="mb-2"><img class="flag" src="img/Italia.png">Italian- Starter</h5>
+    
+                   
+                    <div class="fakeScreen">
+                            <p class="line1"><img src="img/js.png"></img>console.log("Javascript Html CSS(2017-2020)-Junior Programmer");<span class="cursor1">_</span></p>
+                            <p class="line2"><img src="img/c++.png"></img>std::cout<< "C++(2018-2020)-Junior Programmer" ;<span class="cursor2">_</span></p>
+                            <p class="line3"><img src="img/python.png"></img>print("Python(2019-2020)-Junior Programmer")<span class="cursor3">_</span></p>
+                            <p class="line4"><img src="img/csharp.png"></img>Console.WriteLine("C#(2019-2020)-Junior Programmer");<span class="cursor4">_</span></p>
+                            <p class="line5"><span class="cursor4">_</span></p>
+                    </div>
+                    
+                    <h5 class="mt-2 mb-1">Additional Skills:</h5>
+                    <h5 class="mb-1">Experience in office software<br>(Word,Excel,Powerpoint,etc...)</h5>
+                    <h5 class="mb-1">Web Scraping and CSV usyng python</h5>
+                    <h5 class="mb-1">Experience with github, git at the terminal</h5>
+                    <h5 class="mb-2">Expertise using bootstrap and another front-end/back-end libraries</h5>
+            </section>
+            
+            
+            <section class="wrapper Project" id="ProjectEn" >
+                <h1 >WEB Projects</h1>
+                
+                
+                <div class="img">
+                    <a href="https://thetechoracle.herokuapp.com/" class="link" target="_blank" style="color:white"><i class="fas fa-newspaper icons"></i></a>
+                    <h3>Blog TheTechOracle: Back-end based on node express.js  <br>
+                        using nosql MONGODB database and <br> 
+                        made the deploy using the heroku platform<br>
+                        (Click on the journal icon to access the website)</h3>
+                </div>
+                
+                
+                <div class="img">
+                    
+                    <h3>Firechat: This website was made using javascript/html/css <br>
+                        with an nosql Firebase Database and<br> 
+                        deployed through Firebase website<br> 
+                        (Click on the chat icon to access the website)</h3>
+                    <a href="https://fire-chat-7ac0e.web.app/" class="link" style="color:red" target="_blank"><i class="far fa-comment-alt icons"></i></a>
+                </div>
+                
+                
+           </section>
+            
+            
+    
+            <section class="wrapper" id="Contato">
+                
+                <a class="icon" href="mailto:jcmcf2012@gmail.com"><i class="fa fa-envelope center-icon" style="color:white"></i></a>
+                <div id="myButtonEn"></div>
+            </section>
+    
+    
+        </main>
+
 </body>
 
-<script type="text/javascript">
-    $(function () {
-        $('#myButton').floatingWhatsApp({
-            phone: '+55359244-0033',
-            popupMessage: 'Contato Pelo Whatsapp',
-            message: "Mande uma mensagem para mim",
-            showPopup: true,
-            showOnIE: false,
-            headerTitle: 'Bem vindo ao meu portfolio!',
-            headerColor: 'var(--main-green)',
-            backgroundColor: 'var(--main-green)',
-            buttonImage: '<img src="whatsapp.svg" />'
-        });
-    });
-</script>
+
+
+
+
+<script type="text/javascript" src="index.js"></script>
+
 
 
 </html>
